@@ -46,7 +46,7 @@ self.addEventListener("activate", function(event) {
 
 //listen to events to cache get requests
 self.addEventListener("fetch", function(event) {
-    if (event.request.url.includes('/')) {
+    if (event.request.url.includes('/api')) {
       console.log('[Service Worker] Fetch (data)', event.request.url);
   
       event.respondWith(
